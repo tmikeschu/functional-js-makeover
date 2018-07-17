@@ -4,13 +4,9 @@
   "description": "Let's get rid of for loops",
   "main": "index.js",
   "scripts": {
-    "test": "tape"
+    "test": "tape spec.js"
   },
-  "keywords": [
-    "functional",
-    "programming",
-    "ramda"
-  ],
+  "keywords": ["functional", "programming", "ramda"],
   "author": "tmikeschu",
   "license": "ISC",
   "dependencies": {
