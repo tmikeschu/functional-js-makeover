@@ -1,6 +1,4 @@
-const booksInYear = (books, year) => {
-};
-
+const booksInYear = (books, year) => {}
 
 module.exports = {
   booksInYear,
