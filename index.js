@@ -1,14 +1,4 @@
-const booksInYear = (books, year) => {
-  let matches = []
-
-  for (book of books) {
-    if (book.year === year) {
-      matches.push(book)
-    }
-  }
-
-  return matches
-}
+const booksInYear = (books, year) => books.filter(book => book.year === year)
 
 module.exports = {
   booksInYear,
