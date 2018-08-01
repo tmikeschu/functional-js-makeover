@@ -1,5 +1,5 @@
 const test = require("tape")
-const { booksInYear } = require("./index")
+const { whereYear } = require("./index")
 
 const books = [
   {
@@ -30,21 +30,12 @@ const books = [
 ]
 
 test("booksInYear filters an array of books by year", t => {
-  t.plan(2)
-  const curriedBooks = booksInYear(books)
-  const in96 = curriedBooks(1996)
-  const in97 = curriedBooks(1997)
-  const expected1 = [
+  t.plan(1)
+  const in96 = whereYear(1996)
+  const actual = in96(books)
+  const expected = [
     { title: "Infinite Jest", author: "David Foster Wallace", year: 1996 },
     { title: "Fight Club", author: "Chuck Palahniuk", year: 1996 },
   ]
-  const expected2 = [
-    {
-      title: "Harry Potter and the Sorcerer's Stone",
-      author: "J.K. Rowling",
-      year: 1997,
-    },
-  ]
-  t.same(in96, expected1)
-  t.same(in97, expected2)
+  t.same(actual, expected)
 })

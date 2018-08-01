@@ -1,5 +1,5 @@
-const booksInYear = books => year => books.filter(book => book.year === year)
+const whereYear = year => books => books.filter(book => book.year === year)
 
 module.exports = {
-  booksInYear,
+  whereYear,
 }
