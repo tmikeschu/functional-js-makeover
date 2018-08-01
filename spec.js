@@ -1,5 +1,5 @@
 const test = require("tape")
-const { whereYear } = require("./index")
+const { wherePropEq } = require("./index")
 
 const books = [
   {
@@ -31,6 +31,7 @@ const books = [
 
 test("booksInYear filters an array of books by year", t => {
   t.plan(1)
+  const whereYear = wherePropEq("year")
   const in96 = whereYear(1996)
   const actual = in96(books)
   const expected = [
