@@ -1,9 +1,11 @@
-const filter = predicate => xs => xs.filter(predicate)
-const equals = a => b => a === b
-const prop = propName => obj => obj[propName]
+const { filter, equals, prop, propEq, pipe } = require("ramda")
 
-const whereYear = year => filter(item => equals(year)(prop("year")(item)))
+const wherePropEq = propName =>
+  pipe(
+    propEq(propName),
+    filter
+  )
 
 module.exports = {
-  whereYear,
+  wherePropEq,
 }
