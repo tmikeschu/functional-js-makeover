@@ -30,11 +30,21 @@ const books = [
 ]
 
 test("booksInYear filters an array of books by year", t => {
-  t.plan(1)
-  const actual = booksInYear(books, 1996)
-  const expected = [
+  t.plan(2)
+  const curriedBooks = booksInYear(books)
+  const in96 = curriedBooks(1996)
+  const in97 = curriedBooks(1997)
+  const expected1 = [
     { title: "Infinite Jest", author: "David Foster Wallace", year: 1996 },
     { title: "Fight Club", author: "Chuck Palahniuk", year: 1996 },
   ]
-  t.same(actual, expected)
+  const expected2 = [
+    {
+      title: "Harry Potter and the Sorcerer's Stone",
+      author: "J.K. Rowling",
+      year: 1997,
+    },
+  ]
+  t.same(in96, expected1)
+  t.same(in97, expected2)
 })
