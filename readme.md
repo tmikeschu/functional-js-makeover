@@ -50,3 +50,11 @@ not ok 1 should be equivalent
 # pass  0
 # fail  1
 ```
+
+## Extensions: new product requirements
+
+1. Return a list of all the book titles in lower case.
+2. Return #1 filtered by year again.
+3. Return the array of books with the author name converted to their initials.
+4. Return an object with author names pointing to their books. The books should
+   no longer have author name.
