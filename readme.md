@@ -19,6 +19,8 @@ On this journey, we'll cover FUNctional programming topics such as:
 - The consequences of argument order
 - Higher order functions
 
+Read [here](https://medium.com/@tmikeschu/a-functional-javascript-makeover-e1fd017e5413) for more background information and links to a companion blog series I wrote.
+
 ## Setup
 
 ```shell
@@ -50,3 +52,7 @@ not ok 1 should be equivalent
 # pass  0
 # fail  1
 ```
+
+## Branches
+
+Each segment of the [youtube playlist](https://www.youtube.com/playlist?list=PLf6E_SWaTZjHcyfNpk9e3AH5h_8o4qt81) has a corresponding git branch. Explore the different branches to see the refactor in order.
