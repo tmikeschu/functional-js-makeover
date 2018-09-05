@@ -28,29 +28,6 @@ yarn install
 yarn test
 ```
 
-You should have one failing spec:
-
-```shell
-# booksInYear filters an array of books by year
-not ok 1 should be equivalent
-  ---
-    operator: deepEqual
-    expected: |-
-      [ { title: 'Infinite Jest', author: 'David Foster Wallace', year: 1996 }, { title: 'Fight Club', author: 'Chuck Palahniuk', year:
- 1996 } ]
-    actual: |-
-      undefined
-    at: Test.t (/Users/tmikeschu/projects/functional-js-makeover/spec.js:18:5)
-    stack: |-
-      Error: should be equivalent
-  ...
-
-1..1
-# tests 1
-# pass  0
-# fail  1
-```
-
 ## Extensions: new product requirements
 
 1. Return a list of all the book titles in lower case.
