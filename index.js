@@ -43,16 +43,11 @@ const lowerTitlesInYear = year =>
     lowerTitles
   )
 
+const getCapitals = match(/[A-Z]/g)
 const withAuthorInitials = map(
   evolve({
     author: pipe(
-      split(" "),
-      map(
-        pipe(
-          match(/[A-Z]/g),
-          join("")
-        )
-      ),
+      getCapitals,
       join("")
     ),
   })
